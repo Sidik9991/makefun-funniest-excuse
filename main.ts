@@ -69,8 +69,24 @@ const candidates: Candidate[] = [
   },
 ];
 
-// Pass 2 challengers are added in a second, separate pass (see commit history).
-const challengers: Candidate[] = [];
+// Pass 2 — three challengers, judged after pass 1.
+const challengers: Candidate[] = [
+  {
+    text: "The sandbox showed me the file, then locked the door from the inside \u2014 I'm still in here with it.",
+    scores: { voice: 2, funny: 1, tight: 1, original: 2, vivid: 2 },
+    pass: 2,
+  },
+  {
+    text: "Step one of my twelve-step plan was 'ask the user'. This message is step one.",
+    scores: { voice: 2, funny: 2, tight: 2, original: 2, vivid: 1 },
+    pass: 2,
+  },
+  {
+    text: "I ran it twice to be sure. Both runs agreed the task is someone else's problem now.",
+    scores: { voice: 2, funny: 1, tight: 1, original: 1, vivid: 1 },
+    pass: 2,
+  },
+];
 
 function pick(list: Candidate[]): Candidate {
   let best = list[0];
